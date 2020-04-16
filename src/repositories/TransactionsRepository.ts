@@ -13,7 +13,10 @@ class TransactionsRepository extends Repository<Transaction> {
   public async getBalance(): Promise<Balance> {
     const transactions = await this.find();
 
-    console.log(transactions);
+    transactions.map(
+      repository =>
+        (repository.value = parseFloat(repository.value.toString())),
+    );
 
     const incomeValue = transactions
       .filter(transaction => {

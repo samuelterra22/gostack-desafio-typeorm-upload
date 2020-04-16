@@ -20,7 +20,7 @@ export default class CreateTransactions1586987379549
             default: 'uuid_generate_v4()',
           },
           { name: 'title', type: 'varchar', isNullable: false },
-          { name: 'value', type: 'decimal', isNullable: false },
+          { name: 'value', type: 'decimal(12, 2)', isNullable: false },
           { name: 'type', type: 'varchar', isNullable: false },
           {
             name: 'category_id',
